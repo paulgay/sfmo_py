@@ -1,6 +1,8 @@
 # Structure from Motion with Objects (SfMO) in python 
 
-<img src="https://github.com/paulgay/sfmo_py/blob/master/images/sfmo.png" alt="drawing" width="500" align="center"/>
+<p align="center">
+<img src="https://github.com/paulgay/sfmo_py/blob/master/images/sfmo.png" alt="drawing" width="500" />
+</p>
 
 Given 2D object detections in multiple views, the SfMO method outputs affine camera matrices and 3D reconstruction as a set of 3D ellipsoids. 
 
