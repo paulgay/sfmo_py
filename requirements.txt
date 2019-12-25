@@ -1,0 +1,4 @@
+munkres
+numpy
+json
+scipy
