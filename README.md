@@ -1,18 +1,17 @@
-# sfmo_py
-
-Python implementation of the 2016 CVPR paper: "Structure from Motion with Objects (SfMO)". Given 2D object detections in multiple views, the method outputs affine camera matrices and 3D reconstruction as a set of 3D ellipsoides.
-
-The original matlab code can be found [here](https://vgm.iit.it/code/structure-from-motion-with-objects).
-
+# Structure from Motion with Objects (SfMO) in python 
 
 ![adding image](https://github.com/paulgay/sfmo_py/blob/master/images/sfmo.png)
 
 
+Given 2D object detections in multiple views, the SfMO method outputs affine camera matrices and 3D reconstruction as a set of 3D ellipsoids. 
+
+This repo is a python version of the original matlab code which can be found [here](https://vgm.iit.it/code/structure-from-motion-with-objets).
+
 A complete pipeline (object detection, tracking, and SfMO) is provided on a simple sequence. 
 
-## installation
+## Installation
 
-The sfmo module has few dependencies in itself. Some are needed for the tracking and the visualisation
+The SfMO module has few dependencies in itself. Some are needed for the tracking and the visualisation
 
 ```
 pip install -r requirements.txt
@@ -38,7 +37,7 @@ python vis_tracking.py
 
 #### Synthetic data
 
-Included is a module which generates synthetic cameras and ellipsoids and the corresponding ellipses projections. To run sfmo on synhtetic data, run: 
+Included is a module which generates synthetic cameras and ellipsoids and the corresponding ellipses projections. To run SfMO on synhtetic data, run: 
 
 ```
 python do_sfmo_synth_data.py
@@ -47,15 +46,14 @@ python do_sfmo_synth_data.py
 
 #### Generate detection and tracking 
 
-Download YOLO weights 
-
+The detection has been done using [yolo](https://pjreddie.com/darknet/yolo/). Using the following script will generate a file 
+```
+unzip bottle_seq.zip -d image_sequence # Extract the images, if you did not did it before
+python yolo_on_whole_seq.py # You need to set the filepath for yolo model inside the script.
 
 ```
-wget https://pjreddie.com/media/files/yolov3-openimages.weights 
-unzip bottle_seq.zip -d image_sequence # if you did not did it before
-python yolo_on_whole_seq.py # You need to set 
 
-```
+
 
 ```
 
