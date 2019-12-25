@@ -8,7 +8,7 @@ Given 2D object detections in multiple views, the SfMO method outputs affine cam
 
 This repo is a python version of the original matlab code which can be found [here](https://vgm.iit.it/code/structure-from-motion-with-objets).
 
-A complete pipeline (object detection, tracking, and SfMO) is provided on a simple sequence. 
+A complete pipeline (object detection, tracking, and SfMO) is provided on a simple sequence of bottles laid over a table. 
 
 ## Installation
 
@@ -50,7 +50,7 @@ python do_sfmo_synth_data.py
 The detection has been done using [yolo](https://pjreddie.com/darknet/yolo/). Using the following script will generate a file 
 ```
 unzip bottle_seq.zip -d image_sequence # Extract the images, if you did not did it before
-python yolo_on_whole_seq.py # You need to set the filepath for yolo model inside the script.
+python yolo_on_whole_seq.py # You need to set the filepath for the yolo model inside the script.
 
 ```
 
