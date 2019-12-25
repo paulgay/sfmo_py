@@ -1,6 +1,6 @@
 # Structure from Motion with Objects (SfMO) in python 
 
-![adding image](https://github.com/paulgay/sfmo_py/blob/master/images/sfmo.png)
+![adding image](https://github.com/paulgay/sfmo_py/blob/master/images/sfmo.png =250x)
 
 
 Given 2D object detections in multiple views, the SfMO method outputs affine camera matrices and 3D reconstruction as a set of 3D ellipsoids. 
@@ -53,15 +53,12 @@ python yolo_on_whole_seq.py # You need to set the filepath for yolo model inside
 
 ```
 
-
-
 ```
-
 python tracking.py
 ```
 It takes as input the file result.pc which contains the Yolo detections and outputs the file `tracking.json`.
 
-This tracking is very naive, in the sense that the number of objects is assumed to be known, and it associates bounding boxes between consecutive frames by using only spatial proximity
+This tracking is very naive, in the sense that the number of objects is assumed to be known, and it associates bounding boxes between consecutive frames by using only spatial proximity and the hungarian algorithm.
 
 ## citation
 Please cite this paper if you use the code:
